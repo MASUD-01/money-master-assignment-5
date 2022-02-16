@@ -13,36 +13,49 @@
 
 </head>
 
-<body>
-    <main class="container text-center">
-        <h2 class="mt-5 display-3 fw-bold">Monthly Account</h2>
+<body class="container text-center ">
+    <main class="container text-center ">
+        <h2 class="my-5 display-4 fw-bold">Monthly Saving</h2>
         <section>
-            <div class="row">
-                <div class="col-md-6"><img src="./pexels-photo-2068975.jpeg" alt=""></div>
-                <div class="col-md-6">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6 col-sm-12"><img class="img-fluid h-100" src="./pexels-photo-2068975.jpeg" alt="">
+                </div>
+                <div class="col-md-6 col-sm-12">
                     <div class="">
-                        <h3>Income</h3>
-                        <label for="fname">Income:</label>
-                        <input type="text" id="fname" name="fname"><br><br>
+                        <h3 class="mb-4 mt-4">Income</h3>
+                        <label class="fw-bold">Income:</label>
+                        <input type="text" id="income" name="fname"><br><br>
                         <h3>Expenses</h3>
-                        <label for="Food">Food:</label>
-                        <input type="text" id="lname" name="Food"><br><br>
-                        <label for="lname">Rent:</label>
-                        <input type="text" id="lname" name="lname"><br><br>
-                        <label for="lname">Clothes:</label>
-                        <input type="text" id="lname" name="lname"><br><br>
-                        <button>Calculate</button>
+
+                        <form action="" class="text-center">
+                            <div>
+                                <label for="Food">Food:</label>
+                                <input class="text-center" type="text" id="food" name="Foods">
+                            </div> <br>
+                            <div>
+                                <label for="lname">Rent:</label>
+                                <input class="text-center" type="text" id="rent" name="lname">
+                            </div> <br>
+                            <div>
+                                <label for="lname">Clothes:</label>
+                                <input class="text-center" type="text" id="cloth" name="lname">
+                            </div>
+
+                        </form>
+                        <button id="calculate-btn">calculate</button>
+
                     </div>
 
-                    <h3>Total Expenses: <span>5500</span></h3>
-                    <h3>Balance: <span>5500</span></h3>
+                    <h3>Total Expenses: <span id="total-expense">0</span></h3>
+                    <h3>Balance: <span id="total-balance">0</span></h3>
                     <div>
-                        <h5>save: <span class="">0</span> <span>%</span> <button>save</button> </h5>
+                        <h5>save:<input id="saving" type="number"> <span>%</span> <button id="save-btn">save</button>
+                        </h5>
                     </div>
 
                     <div>
-                        <h3>Saving Amunt: <span>5500</span></h3>
-                        <h3>Remaining Balance: <span>5500</span></h3>
+                        <h3>Saving Amount: <span id="saving-amount">0</span></h3>
+                        <h3>Remaining Balance: <span id="remain-balance">0</span></h3>
                     </div>
 
                 </div>
