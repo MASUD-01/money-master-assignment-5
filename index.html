@@ -5,12 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Monthly account</title>
     <link rel="stylesheet" href="style.css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
 
 <body>
+    <main class="container">
+        <h2>Monthly Account</h2>
+        <section>
+            <div class="row">
+                <div class="col-md-6"><img src="./pexels-photo-2068975.jpeg" alt=""></div>
+                <div class="col-md-6">
+                    <div>
+                        <h3>Income</h3>
+                        <label for="fname">Income:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <h3>Expenses</h3>
+                        <label for="Food">Food:</label>
+                        <input type="text" id="lname" name="Food"><br><br>
+                        <label for="lname">Rent:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <label for="lname">Clothes:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <button>Calculate</button>
+                    </div>
 
+                    <h3>Total Expenses: <span>5500</span></h3>
+                    <h3>Balance: <span>5500</span></h3>
+                    <div>
+                        <h5>save: <span class="">0</span> <span>%</span> <button>save</button> </h5>
+                    </div>
+
+                    <div>
+                        <h3>Saving Amunt: <span>5500</span></h3>
+                        <h3>Remaining Balance: <span>5500</span></h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="javascript.js"></script>
 </body>
