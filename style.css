@@ -3,3 +3,14 @@ width: 80px;
 height: 40px;
 background-color: #dcdcdc;
 }
+
+.bg-secondarys{
+    background: rgb(37, 21, 21);
+}
+
+.btn-fontsize{
+    font-size: 20px;
+}
+img{
+    height: 100px;
+}
