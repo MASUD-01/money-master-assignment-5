@@ -1,6 +1,8 @@
 
-document.getElementById('calculate-btn').addEventListener('click', function () {
 
+// event handler for calculate button
+document.getElementById('calculate-btn').addEventListener('click', function () {
+    //get capital income
     const incomeValue = document.getElementById('income')
     const getIncomeValue = incomeValue.value
 
@@ -26,12 +28,24 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         const totalBalanceUpdate = document.getElementById('total-balance')
         totalBalanceUpdate.innerText = totalBalanceCalc
 
-        if (getIncomeValue < totalExpensesValue) {
-            alert('your have spend money more than your income')
-        }
+        //validation, totalExpensesValue not more than getIncomeValue
+        validation(getIncomeValue < totalExpensesValue, true)
     }
 })
 
+// this function for check validation
+function validation(amount, isEqual) {
+    if (amount && isEqual == true) {
+        alert('your have spend money more than your income')
+    }
+    else if (amount && isEqual == false) {
+        alert("you don't have enough money to saving")
+
+    }
+}
+
+
+// event handler for save button
 document.getElementById('save-btn').addEventListener('click', function () {
 
     //calculate saving amount
@@ -41,21 +55,16 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const savingValue = document.getElementById('saving').value
     const savingPercentage = (getIncomeValue * parseInt(savingValue) / 100)
 
-
     // update saving amount
     const savingAmount = document.getElementById('saving-amount')
     savingAmount.innerText = savingPercentage
     const totalBalance = document.getElementById('total-balance').innerText
 
     //validation, savingAmount not more than totalBalance
-    if (totalBalance < savingAmount.innerText) {
-        alert("you don't have enough money to saving")
-
-    }
+    validation(totalBalance < savingAmount.innerText, false)
 
     //update remaining balance
     const remainingBalance = totalBalance - savingAmount.innerText
     const remainBalance = document.getElementById('remain-balance')
     remainBalance.innerText = remainingBalance
-
 })
