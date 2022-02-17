@@ -61,7 +61,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const totalBalance = document.getElementById('total-balance').innerText
 
     //validation, savingAmount not more than totalBalance
-    validation(totalBalance < savingAmount.innerText, false)
+    validation(savingAmount.innerText > totalBalance, false)
 
     //update remaining balance
     const remainingBalance = totalBalance - savingAmount.innerText
